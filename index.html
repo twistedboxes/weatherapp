@@ -1,55 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <script src="https://kit.fontawesome.com/82c31b14e1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>    
 </head>
+
 <body>
-    <div class="Container">
-
+    <div class="container"> 
         
-
-        <section class="Main">
-    
-            <form id="writtenText">
-                <label for="fname"></label><br>
-                <input type="text" id="fname" name="fname"><br>
-              
-              </form> 
-
-            <div class="top-sect">
-                <i class="fa-solid fa-spinner fa-spin"> </i>
-                
-            </div>
-    
-            <div class="mid-sect">
-                <div class="degrees"><p class="Cifra"> --°</p></div>
-                <div class="Weather-desc">
-                    <p>Loading Weather</p>
-                    <div class="location">
-                        <p>Loading City</p>
-                    </div>
+        <div class="box">
+            <div class="card">
+                <div class="top-sect">
+                    <form id="writtenText">
+                        <label for="fname"></label><br>
+                        <input type="text" id="fname" name="fname"><br>
+        
+                    </form>
+                    <h2 class="temp">Loading</h2>
                 </div>
-                
+                <div class="bot-sect">
+                    <p class="wmo">Loading</p>
+                    <p class="city">Loading City</p>
+                    <p class="windspd">--</p>
+                    <p class="humi">--</p>
+                    <p class="precip">--</p>
+                </div>
             </div>
-    
-            <div class="bot-sect">
-                <ul>
-                    <li>--ms</li>
-                    <li>--%</li>
-                    <li>-%</li>
-                </ul>
-            </div>
-    
-    
-        </section>
+        </div>
         
     </div>
-    
-</body> 
+    <script defer src="script.js"></script>    
+</body>
+
 </html>
