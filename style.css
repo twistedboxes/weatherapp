@@ -49,6 +49,7 @@ body {
 .last-row {
     display: flex;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .mid-sect {
@@ -70,9 +71,9 @@ body {
 .last-row p {
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     width: 100%;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 
@@ -94,4 +95,11 @@ body {
     border-radius: 0.8em;
     border-style: none;
     padding: 0.3em;
+}
+
+.last-row i {
+    color: aquamarine;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
 }
