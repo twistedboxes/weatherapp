@@ -8,6 +8,11 @@ body {
     background-color: coral;
 }
 
+.card {
+    justify-content: center;
+    text-align: center;
+}
+
 .container {
     height: 100vh;
     width: 100%;
@@ -32,9 +37,20 @@ body {
 }
 
 .top-sect {
+    display: flex;
+    flex-direction: column;
     background-color: beige;
     width: 100%;
     height: 50%;
+}
+
+.fa-solid {
+    color:black;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
 
 .bot-sect {
