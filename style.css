@@ -46,8 +46,27 @@ body {
 }
 
 
+.last-row {
+    display: flex;
+    margin: 0 auto;
+}
 
+.mid-sect {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+}
 
+.weather-desc {
+    padding-left: 0.7em;
+}
+
+.last-row p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
 
 
 

@@ -118,9 +118,9 @@ class Card {
         let hourly = jsonRes.hourly
         let temp = `${hourly.temperature_2m[currentTime]}°`
         let wmo = decodeWmo(jsonRes.hourly.weathercode[currentTime])
-        let windspd = `Wind: ${hourly.windspeed_10m[currentTime]}ms`
-        let precip = `Precipitations: ${hourly.precipitation_probability[currentTime]}%`
-        let humi = `Humidity: ${hourly.relativehumidity_2m[currentTime]}%`
+        let windspd = `${hourly.windspeed_10m[currentTime]}ms`
+        let precip = `${hourly.precipitation_probability[currentTime]}%`
+        let humi = `${hourly.relativehumidity_2m[currentTime]}%`
         let cleanData = { city, wmo, temp, windspd, humi, precip }
         return cleanData
     }
