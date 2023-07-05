@@ -1,3 +1,54 @@
+function iconSwitcher(toChange) {
+    switch (toChange) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+            return "fa-solid fa-sun"
+            break;
+        case 45:
+        case 48:
+            return "fa-solid fa-smog"
+            break;
+        case 51:
+        case 53:
+        case 55:
+        case 56:
+        case 57:
+            return "fa-solid fa-droplet"
+            break;
+        case 61:
+        case 63:
+        case 65:
+        case 66:
+        case 67:
+            return "fa-solid fa-cloud-rain"
+            break;
+        case 71:
+        case 73:
+        case 75:
+        case 77:
+            return "fa-solid fa-snowflake"
+            break;
+        case 80:
+        case 81:
+        case 82:
+            return "fa-solid fa-cloud-showers-heavy"
+            break;
+        case 85:
+        case 86:
+            return "Snow fa-solid fa-snowflake"
+            break;
+        case 95:
+        case 96:
+        case 99:
+        case "*":
+            return "fa-solid fa-cloud-bolt"
+            break;
+        default:
+            return "fa-solid fa-spinner"
+    }
+}
 
 
 
@@ -59,8 +110,9 @@ function decodeWmo(toChange) {
 
 
 class Card {
-    constructor(wmo, temp, city, windspd, humi, precip) {
-        this.wmo = wmo
+    constructor(icon, wmo, temp, city, windspd, humi, precip) {
+        this.icon = icon;
+        this.wmo = wmo;
         this.temp = temp;
         this.city = city;
         this.windspd = windspd;
@@ -72,8 +124,8 @@ class Card {
 
 
     submitForm(ev) {
-        
-        console.log("form submitted",ev)
+
+        console.log("form submitted", ev)
         //ev.preventDefault()
 
         let userInput = document.getElementById("fname").value
@@ -81,6 +133,8 @@ class Card {
         console.log(userInput)
         return userInput
     }
+
+
 
     handleForm() {
         let form = document.getElementById("writtenText")
@@ -122,24 +176,28 @@ class Card {
         let precip = `${hourly.precipitation_probability[currentTime]}%`
         let humi = `${hourly.relativehumidity_2m[currentTime]}%`
         let cleanData = { city, wmo, temp, windspd, humi, precip }
+        let icon = document.querySelector(".top-sect i")
+        icon.className =iconSwitcher(jsonRes.hourly.weathercode[currentTime])
+            console.log(icon)
         return cleanData
     }
 
 
     async populateData(ev) {
-        
+
         ev.preventDefault()
         let cleanData = await this.getData()
         for (const propName in cleanData) {
             document.querySelector(`.${propName}`).textContent = cleanData[propName]
         }
 
+
     }
 }
 
 
 
-let testCard = new Card("wmo", "temp", "city", "windspd", "humi", "precip")
+let testCard = new Card("icon", "wmo", "temp", "city", "windspd", "humi", "precip")
 
 
 
