@@ -1,1 +1,7 @@
 Refactoring (Correct HTML too) -> Convert to OOP -> Add Dark Mode
+
+Missing fixes:
+
+1. Icon doesn't change based on wmo - implement switch/case
+
+2. Add icons in last row before each element
