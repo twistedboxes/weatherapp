@@ -6,4 +6,6 @@ Missing fixes:
 
 // Done // 2. Add icons in last row before each element
 
-Next: Dark mode
+// Done // 3. Dark mode
+
+4. Allow user to create up to two more cards (total 3) to compare weather conditions between different locations
