@@ -9,9 +9,22 @@ body {
     height: 100%
 }
 
+#toggleBtn {
+    position: fixed;
+    top: 2em;
+    left: 90vw;
+    color: black;
+    border-style: none;
+    border-radius: 2em;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1.2em;
+    
+}
+
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     justify-items: center;
     align-content: center;
@@ -102,4 +115,11 @@ body {
     font-size: 0.8em;
     margin: 0;
     padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: darkblue;
+        color: white;
+    }
 }

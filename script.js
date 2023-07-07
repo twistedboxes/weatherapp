@@ -1,3 +1,31 @@
+function darkLight() {
+    const body = document.body
+    const topSect = document.querySelector(".top-sect")
+    const icon = document.querySelector(".fa-solid")
+    const botSect = document.querySelector(".bot-sect")
+    const btn = document.getElementById("toggleBtn")
+
+    if(body.style.backgroundColor != "rgb(5, 5, 5)") {
+        body.style.backgroundColor= "rgb(5, 5, 5)"
+        topSect.style.backgroundColor = "rgb(29, 28, 28)"
+        icon.style.color = "whitesmoke"   
+        botSect.style.backgroundColor = "rgb(50, 50, 80)"
+        btn.style.color = ("white")
+    }
+    else {
+        body.style.backgroundColor = "coral"
+        topSect.style.backgroundColor = "white"
+        icon.style.color = "rgb(29,29,29)"
+        botSect.style.backgroundColor = "rgb(39,39,39)"
+        btn.style.color = ("rgb(39,39,39)")
+    }
+}
+
+const btn = document.getElementById("toggleBtn")
+
+btn.addEventListener("click", darkLight)
+
+
 function iconSwitcher(toChange) {
     switch (toChange) {
         case 0:
@@ -133,6 +161,8 @@ class Card {
         console.log(userInput)
         return userInput
     }
+
+
 
 
 
